@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/cec11dee60.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=STIX+Two+Math&display=swap" rel="stylesheet">
+  
+  </head>
+  <body>
+    <div class="container">
+      <main>
+      <div class="row">
+        <div class="col">
+         <span class="cities" id="city">
+           <h1>Amsterdam</h1></span>
+            <h2><strong><span class="temperature" id="degree">21</span></strong><small><span class="units">
+            <a href ="#" id="celsius-link">°C</a>|
+            <a href="#" id="fahrenheit-link">°F</a></span></small><i class="fas fa-cloud-sun weather-icon"></i></h2>
+            <ul>
+              <li> Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+            </div>
+        <div class="col">
+          <span class="days" id="day"><h1>Saturday</h1></span>
+          <h3>21:02</h3>
+          <h5>24/07/21</h5>
+        </div>
+      </div>
+    </br>
+      <form>
+        <div class="mb-3">
+          <input "text" placeholder="Enter the city here" autofocus= "off"
+          type="city" class="form-control" id="city-name"
+          aria-describedby="emailHelp" />
+        </div>
+        <button type="search" class="btn btn-primary">Search</button>
+        <button type="current" class="btn btn-secondary" id="current-location-button">Current</button>
+      </form> 
+    </main>
+  </br>
+    <section>
+      <span class="days">
+        <button>
+        Mon
+        </br>
+        <i class="fas fa-bolt "></i>
+        </br>
+        <strong> 22°C/°F</strong>
+        </button>
+      </span>
+      <span class="days">
+        <button>
+        Tue
+        </br>
+        <i class="fas fa-bolt"></i>
+        </br>
+        <strong> 22°C/°F</strong>
+        </button>
+      </span>
+      <span class="days">
+      <button>
+        Wed
+      </br>
+      <i class="fas fa-cloud-showers-heavy humidity"></i>
+      </br>
+       <strong> 21°C/°F</strong>
+       </button>
+      </span>
+      <span class="days">
+        <button>
+        Thu
+        </br>
+        <i class="fas fa-cloud-rain"></i>
+        </br>
+        <strong> 19°C/°F</strong>
+        </button>
+      </span>
+      <span class="days">
+        <button>
+        Fri
+        </br>
+        <i class="fas fa-cloud-showers-heavy humidity"></i>
+        </br>
+         <strong> 20°C/°F</strong>
+      </span>
+      <span class="days">
+        <button>
+        Sat
+        </br>
+        <i class="fas fa-cloud-showers-heavy humidity"></i>
+        </br>
+        <strong> 19°C/°F</strong>
+        </button>
+      </span>
+      <span class="days">
+        <button>
+        Sun
+        </br>
+        <i class="fas fa-cloud-showers-heavy humidity"></i>
+        </br>
+         <strong> 19°C/°F</strong>
+        </button>
+      </span>
+    </section>
+    </div>
+    <script src = "src/index.js"></script>
+  </body>
+</html>

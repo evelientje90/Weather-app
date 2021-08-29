@@ -1,0 +1,98 @@
+h1 {
+    font-family: "PT Sans", sans-serif;
+  }
+  h2 {
+    font-family: "PT Sans", sans-serif;
+    font-size: 50px;
+  }
+  .weather-icon {
+    color: #757a79;
+    font-size: 50px;
+  }
+  .fa-bolt {
+    color: #f1d18a;
+    font-size: 50px;
+  }
+  .humidity {
+    color: #757a79;
+    font-size: 50px;
+  }
+  .fa-cloud-rain {
+    color: #757a79;
+    font-size: 50px;
+  }
+  body {
+    margin: 60px 600px 600px 30px;
+    text-align: left;
+    background: linear-gradient(
+      109.6deg,
+      rgb(17, 151, 147) 11.2%,
+      rgb(154, 214, 212) 55.4%,
+      rgb(255, 233, 171) 100.2%
+    );
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid;
+  }
+  .container {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: block;
+  }
+  button {
+    font-family: "PT Sans", sans-serif;
+    color: black;
+    font-size: 22px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: transparent;
+    border: 0px solid #25161b;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in-out;
+  }
+  
+  button:hover {
+    background: #6d597a;
+    color: white;
+    cursor: pointer;
+  }
+  .col {
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(254, 255, 165) 0%,
+      rgb(255, 232, 182) 90%
+    );
+    border-radius: 10px;
+  }
+  #day {
+    font-family: "PT Sans", sans-serif;
+    font-size: 38px;
+  }
+  #city {
+    font-family: "PT Sans", sans-serif;
+    font-size: 38px;
+  }
+  .units {
+    font-size: 20px;
+  }
+  li {
+    color: #352323;
+    font-size: 18px;
+    font-weight: 200;
+    height: 19px;
+    line-height: 1;
+    list-style: none;
+  }
+  ul {
+    padding-left: 0;
+  }
+  #current-location-button {
+    background: #3e69d9;
+  }
+  
