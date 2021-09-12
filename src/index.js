@@ -46,6 +46,31 @@ h3.innerHTML = `${hours}:${minutes}`;
 h5.innerHTML = `${month}/${year}`;
 headingDay.innerHTML = `${day}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = '<div class="row">';
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function(day) {
+  forecastHTML = forecastHTML +`
+  <div class="col-2">
+    <button>
+      <div class="weather-forecast-date">${day}</div>
+      </br>
+        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" />
+      </br>
+        <div class="weather-forecast-temperatures"></div>
+        <strong><span class="weather-forecast-temperature-max">°C/°F</span></strong>
+        <strong><span class="weather-forecast-temperature-min">°C/°F</span></strong>
+    </button>
+  </div>
+`;
+  }
+  );
+  forecastHTML = forecastHTML +`</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#degree").innerHTML = Math.round(
@@ -123,3 +148,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Amsterdam");
+displayForecast();
