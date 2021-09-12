@@ -24,8 +24,9 @@
   .weather-app {
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid;
+    border: 1px solid #6d597a;
   }
+
   button {
     font-family: "PT Sans", sans-serif;
     color: black;
@@ -45,6 +46,8 @@
     cursor: pointer;
   }
   .col {
+    margin-top: 0px;
+    padding: 20px;
     background: radial-gradient(
       circle at 10% 20%,
       rgb(254, 255, 165) 0%,
@@ -53,10 +56,12 @@
     border-radius: 10px;
   }
   #day {
+    color: grey;
     font-size: 38px;
   }
 
   #city {
+    color:grey;
     font-size: 38px;
   }
 
@@ -72,13 +77,12 @@
     line-height: 1;
     list-style: none;
   }
+
   ul {
     padding-left: 0;
   }
-  #current-location-button {
-    background: #3e69d9;
-  }
+
   .weather-app-wrapper{
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 100px auto;;
   }
