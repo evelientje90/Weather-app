@@ -61,8 +61,8 @@ function displayForecast(response) {
         <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
-        <strong><span class="weather-forecast-temperature-max">°C/°F</span></strong>
-        <strong><span class="weather-forecast-temperature-min">°C/°F</span></strong>
+        <strong><span class="weather-forecast-temperature-max">${forecastDay.temp.max}°C/°F</span></strong>
+        <strong><span class="weather-forecast-temperature-min">${forecastDay.temp.min}°C/°F</span></strong>
     </button>
   </div>
 `;
