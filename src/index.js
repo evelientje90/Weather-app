@@ -46,19 +46,26 @@ h3.innerHTML = `${hours}:${minutes}`;
 h5.innerHTML = `${month}/${year}`;
 headingDay.innerHTML = `${day}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return day;
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = '<div class="row">';
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   forecast.forEach(function(forecastDay) {
   forecastHTML = forecastHTML +`
   <div class="col-2">
     <button>
-      <div class="weather-forecast-date">${forecastDay.dt}</div>
-        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" />
+      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
         <strong><span class="weather-forecast-temperature-max">${forecastDay.temp.max}°C/°F</span></strong>
