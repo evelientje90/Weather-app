@@ -49,9 +49,9 @@ headingDay.innerHTML = `${day}`;
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  return day;
+  return days[day];
 }
 
 function displayForecast(response) {
@@ -68,8 +68,8 @@ function displayForecast(response) {
         <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
-        <strong><span class="weather-forecast-temperature-max">${forecastDay.temp.max}°C/°F</span></strong>
-        <strong><span class="weather-forecast-temperature-min">${forecastDay.temp.min}°C/°F</span></strong>
+        <strong><span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°C/°F</span></strong>
+        <strong><span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°C/°F</span></strong>
     </button>
   </div>
 `;
