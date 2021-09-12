@@ -47,16 +47,17 @@ h5.innerHTML = `${month}/${year}`;
 headingDay.innerHTML = `${day}`;
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = '<div class="row">';
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function(day) {
+  forecast.forEach(function(forecastDay) {
   forecastHTML = forecastHTML +`
   <div class="col-2">
     <button>
-      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
@@ -156,4 +157,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Amsterdam");
-displayForecast();
