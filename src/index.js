@@ -58,7 +58,7 @@ function displayForecast(response) {
   <div class="col-2">
     <button>
       <div class="weather-forecast-date">${forecastDay.dt}</div>
-        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" />
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
         <strong><span class="weather-forecast-temperature-max">${forecastDay.temp.max}°C/°F</span></strong>
