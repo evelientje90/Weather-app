@@ -60,8 +60,8 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = '<div class="row">';
-  forecast.forEach(function(forecastDay) {
-
+  forecast.forEach(function(forecastDay, index) {
+    if (index < 6) {
   forecastHTML = forecastHTML +`
   <div class="col-2">
     <button>
@@ -75,14 +75,14 @@ function displayForecast(response) {
   </div>
 `;
   }
-);
+  });
   forecastHTML = forecastHTML +`</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates){
   let apiKey = "e01ffd0a800129f60f574000f6bbe8e0";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
