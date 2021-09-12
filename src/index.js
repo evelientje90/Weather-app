@@ -56,7 +56,6 @@ function displayForecast() {
   <div class="col-2">
     <button>
       <div class="weather-forecast-date">${day}</div>
-      </br>
         <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" />
       </br>
         <div class="weather-forecast-temperatures"></div>
