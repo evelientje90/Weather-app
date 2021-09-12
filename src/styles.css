@@ -2,10 +2,6 @@
     font-size: 50px;
   }
 
-  .weather-icon {
-    font-size: 50px;
-  }
-
   .humidity {
     font-size: 50px;
   }
@@ -45,6 +41,7 @@
     color: white;
     cursor: pointer;
   }
+
   .col {
     margin-top: 0px;
     padding: 20px;
@@ -55,6 +52,7 @@
     );
     border-radius: 10px;
   }
+
   #day {
     color: grey;
     font-size: 38px;
